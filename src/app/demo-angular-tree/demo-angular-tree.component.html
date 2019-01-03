@@ -1,0 +1,9 @@
+<div style="padding: 50px;">
+  <h1>Demo Angular Tree</h1>
+  <tree-root [nodes]="nodes" [options]="options" (updateData)="onUpdateData($event)" (moveNode)="onMoveNode($event)">
+    <ng-template #treeNodeTemplate let-node let-index="index">
+      <span>{{ node.data.name }}</span>
+      <button (click)="go($event)">Custom Action</button>
+    </ng-template>
+  </tree-root>
+</div>
